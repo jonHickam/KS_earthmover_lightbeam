@@ -4,7 +4,7 @@ holding place for collaborative effort to enable flat file loads of student data
 PLEASE NOTE DO NOT INCLUDE ACTUAL STUDENT DATA. Sample data only.
 
 directory structure:
-Templates: Jinja templates
-samples: sample csvs
-output: json formatted version of sample files
+Templates: Jinja templates  
+samples: sample csvs  
+output: json formatted version of sample files  
 
