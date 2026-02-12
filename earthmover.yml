@@ -1,0 +1,19 @@
+version: 2
+
+config:
+  output_dir: ./output/
+
+sources:
+  csv_source:
+    file: ./in/descriptor.csv
+    header_rows: 1
+
+
+destinations:
+  mydata:
+    source: $sources.csv_source
+    template: ./templates/mydata.jsont
+    extension: jsonl
+    linearize: True
+    
+    

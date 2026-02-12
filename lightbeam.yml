@@ -1,0 +1,42 @@
+state_dir: ./lightbeam/
+data_dir: ./output/
+namespace: ed-fi
+edfi_api:
+  base_url: https://localhost/binaries/WebApi
+  oauth_url: https://localhost/binaries/WebApi/oauth/token 
+  dependencies_url: https://localhost/binaries/WebApi/metadata/data/v3/dependencies
+  open_api_metadata_url: https://localhost/binaries/WebApi/metadata/
+  descriptors_swagger_url: https://localhost/binaries/WebApi/metadata/data/v3/descriptors/swagger.json
+  resources_swagger_url: https://localhost/binaries/WebApi/metadata/data/v3/resources/swagger.json
+  version: 3
+  mode: sandbox
+  year: 2021
+  client_id: d8y24vwqozlrf9gtBOiMA
+  client_secret: V1m35M4O8SItkDU7QBihc
+connection:
+  pool_size: 8
+  timeout: 60
+  num_retries: 10
+  backoff_factor: 1.5
+  retry_statuses: [429, 500, 502, 503, 504]
+  verify_ssl: False
+count:
+  separator: ","
+fetch:
+  page_size: 100
+validate:
+  methods:
+    - schema # checks that payloads conform to the Swagger definitions from the API
+    - descriptors # checks that descriptor values are either locally-defined or exist in the remote API
+    - uniqueness # checks that local payloads are unique by the required property values
+    - references # checks that references resolve, either locally or in the remote API
+  # or `methods: "*"`
+  references:
+    selector:
+      - studentAssessments.studentReference
+      - studentSchoolAssociations.schoolReference
+    behavior: exclude # or `include`
+    remote: False # default=True
+force_delete: True
+log_level: INFO
+show_stacktrace: True

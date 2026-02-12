@@ -1,0 +1,5 @@
+{
+    "CodeValue": "{{Code}}",
+    "shortDescription": "{{shortDescription}}",
+	"NameSpace": "uri://ed-fi.org/AbsenceEventCategoryDescriptor"
+}
