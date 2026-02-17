@@ -1,8 +1,6 @@
-
 {%- set possible_grades = [
   [Preschool,"Preschool"],
   [Infant,"Infant/Toddler"],
-  [Kindergarten,"Kindergarten"],
   [FirstGrade,"First grade"],
   [SecondGrade,"Second grade"],
   [ThirdGrade,"Third grade"],
@@ -39,19 +37,15 @@
     "schoolYear": {{SchoolYear}},
     "sessionName": "{{SessionName}}"
   }
+
   {%- if actual_grades -%}
-  "offeredGradeLevels": [
+  , "offeredGradeLevels": [
     {% for grade2 in actual_grades %}
-      ,{
+      {
         "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#{{grade2[1]}}"
       } {% if not loop.last %},{% endif %}
     {% endfor %}
   ]
   {%- endif -%}
-
-
-
-
-
 }
 
