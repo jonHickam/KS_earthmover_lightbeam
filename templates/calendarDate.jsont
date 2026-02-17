@@ -1,0 +1,14 @@
+
+{
+  "calendarEvents": [
+    {
+      "calendarEventDescriptor": "uri://ed-fi.org/CalendarEventDescriptor#{{CalendarEventDescriptor}}"
+    }
+  ],
+  "date": "{{Date}}",
+  "calendarReference": {
+    "calendarCode": "{{CalendarCode}}",
+    "schoolId": {{SchoolID}},
+    "schoolYear": {{SchoolYear}}
+				}
+}

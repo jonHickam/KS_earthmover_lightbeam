@@ -7,7 +7,14 @@ sources:
   calendar:
     file: ./samples/CalendarTypeGradeLevels.csv
     header_rows: 1
+    
+  calendarDate:
+    file: ./samples/CalendarDateAndEvent.csv
+    header_rows: 1
 
+  courseOffering:
+    file: ./samples/CourseOfferings.csv
+    header_rows: 1
 
 destinations:
   calendar:
@@ -15,5 +22,15 @@ destinations:
     template: ./templates/calendar.jsont
     extension: jsonl
     linearize: True
-    
-    
+ 
+  calendarDate:
+    source: $sources.calendarDate
+    template: ./templates/calendarDate.jsont
+    extension: jsonl
+    linearize: True
+
+  courseOffering:
+    source: $sources.courseOffering
+    template: ./templates/CourseOffering.jsont
+    extension: jsonl
+    linearize: True

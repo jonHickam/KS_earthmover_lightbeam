@@ -1,4 +1,4 @@
-Calendar  Code,Date,School ID,School Year,Calendar Event Descriptor
+CalendarCode,Date,SchoolID,SchoolYear,CalendarEventDescriptor
 TestCalendar,09/01/2025,310019984,2026,Holiday
 IEPCalendar,12/01/2025,310019984,2026,Instructional Day
 SchoolCalendar,05/01/2026,310019984,2026,Other

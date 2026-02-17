@@ -1,5 +1,5 @@
-Local Course Code,School ID,Course Code,Education Organization ID,School Year,Session Name,Section Identifier,Course Credits,Course Sequence,Total Course Sequence,CourseDeliveryType Descriptor,CourseProgramType Descriptor,CollegeCareerType Descriptor,CourseLevelCharacteristic Descriptor,Preschool,Kindergarten,First grade,Second grade,Third grade,Fourth grade,Fifth grade,Sixth grade,Seventh grade,Eighth grade,Ninth grade,Tenth grade,Eleventh grade,Twelfth grade,Ungraded
-ELA 1,310019984,1001,100000000,2026,ELA1Session,Classroom1,5,1,1,S,M,,B,N,N,Y,N,N,N,N,N,N,N,N,N,N,N,N
-ELA 2,310019984,1002,100000000,2026,ELA2Session,Classroom2,5,1,1,V,A,,B,N,N,N,Y,N,N,N,N,N,N,N,N,N,N,N
-ELA 3,310019984,1004,100000000,2026,ELA3Session,Classroom3,5,1,1,G,G,,G,N,N,N,N,Y,N,N,N,N,N,N,N,N,N,N
-ELA 4,310019984,1005,100000000,2026,ELA4Session,Classroom4,5,1,1,D,G,C,H,N,N,N,N,N,Y,N,N,N,N,N,N,N,N,N
+LocalCourseCode,SchoolID,CourseCode,EducationOrganizationID,SchoolYear,SessionName,SectionIdentifier,CourseCredits,CourseSequence,TotalCourseSequence,CourseDeliveryTypeDescriptor,CourseProgramTypeDescriptor,CollegeCareerTypeDescriptor,CourseLevelCharacteristicDescriptor,Preschool,Infant/Toddler,First grade,Second grade,Third grade,Fourth grade,Fifth grade,Sixth grade,Seventh grade,Eighth grade,Ninth grade,Tenth grade,Eleventh grade,Twelfth grade,Ungraded
+ELA 1,310019984,1001,100000000,2026,ELA1Session,Classroom1,5,1,1,S,M,,B,N,N,Y,N,N,N,N,N,N,N,N,N,N,Y,N
+ELA 2,310019984,1002,100000000,2026,ELA2Session,Classroom2,5,1,1,V,A,,B,N,N,N,Y,N,N,N,N,N,N,N,N,N,Y,N
+ELA 3,310019984,1004,100000000,2026,ELA3Session,Classroom3,5,1,1,G,G,,G,N,N,N,N,Y,N,N,N,N,N,N,N,Y,N,N
+ELA 4,310019984,1005,100000000,2026,ELA4Session,Classroom4,5,1,1,D,G,C,H,N,N,N,N,N,Y,N,N,N,N,N,N,Y,N,N

@@ -1,0 +1,4 @@
+ { "calendarEvents": [ { "calendarEventDescriptor": "uri://ed-fi.org/CalendarEventDescriptor#Holiday" } ], "date": "09/01/2025", "calendarReference": { "calendarCode": "TestCalendar", "schoolId": 310019984, "schoolYear": 2026 } } 
+ { "calendarEvents": [ { "calendarEventDescriptor": "uri://ed-fi.org/CalendarEventDescriptor#Instructional Day" } ], "date": "12/01/2025", "calendarReference": { "calendarCode": "IEPCalendar", "schoolId": 310019984, "schoolYear": 2026 } } 
+ { "calendarEvents": [ { "calendarEventDescriptor": "uri://ed-fi.org/CalendarEventDescriptor#Other" } ], "date": "05/01/2026", "calendarReference": { "calendarCode": "SchoolCalendar", "schoolId": 310019984, "schoolYear": 2026 } } 
+ { "calendarEvents": [ { "calendarEventDescriptor": "uri://ed-fi.org/CalendarEventDescriptor#Staff Development or In-Service Day" } ], "date": "01/02/2026", "calendarReference": { "calendarCode": "StaffCalendar", "schoolId": 310019984, "schoolYear": 2026 } } 

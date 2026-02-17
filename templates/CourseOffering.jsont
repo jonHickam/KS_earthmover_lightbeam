@@ -1,0 +1,57 @@
+
+{%- set possible_grades = [
+  [Preschool,"Preschool"],
+  [Infant,"Infant/Toddler"],
+  [Kindergarten,"Kindergarten"],
+  [FirstGrade,"First grade"],
+  [SecondGrade,"Second grade"],
+  [ThirdGrade,"Third grade"],
+  [FourthGrade,"Fourth grade"],
+  [FifthGrade,"Fifth grade"],
+  [SixthGrade,"Sixth grade"],
+  [SeventhGrade,"Seventh grade"],
+  [EighthGrade,"Eighth grade"],
+  [NinthGrade,"Ninth grade"],
+  [TenthGrade,"Tenth grade"],
+  [EleventhGrade,"Eleventh grade"],
+  [Twelfthgrade,"Twelfth grade"],
+  [Ungraded,"Ungraded"]
+] -%}
+
+{%- set actual_grades = [] -%}
+{%- for grade in possible_grades -%}
+  {%- if grade[0] in ["Y","y"] -%}
+    {%- set _ = actual_grades.append(grade) -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{
+  "localCourseCode": "{{LocalCourseCode}}",
+  "courseReference": {
+    "courseCode": "{{CourseCode}}",
+    "educationOrganizationId": {{EducationOrganizationID}}
+  },
+  "schoolReference": {
+    "schoolId": {{SchoolID}}
+  },
+  "sessionReference": {
+    "schoolId": {{SchoolID}},
+    "schoolYear": {{SchoolYear}},
+    "sessionName": "{{SessionName}}"
+  }
+  {%- if actual_grades -%}
+  "offeredGradeLevels": [
+    {% for grade2 in actual_grades %}
+      ,{
+        "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#{{grade2[1]}}"
+      } {% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+  {%- endif -%}
+
+
+
+
+
+}
+
