@@ -1,62 +1,48 @@
 
 {%- set possible_grades = [
   [Preschool,"Preschool"],
-  [Infant/Toddler,"Infant/Toddler"],
+  [Infant,"Infant/Toddler"],
   [Kindergarten,"Kindergarten"],
-  [First grade,"First grade"],
-  [Second grade,"Second grade"],
-  [Third grade,"Third grade"],
-  [Fourth grade,"Fourth grade"],
-  [Fifth grade,"Fifth grade"],
-  [Sixth grade,"Sixth grade"],
-  [Seventh grade,"Seventh grade"],
-  [Eighth grade,"Eighth grade"],
-  [Ninth grade,"Ninth grade"],
-  [Tenth grade,"Tenth grade"],
-  [Eleventh grade,"Eleventh grade"],
-  [Twelfth grade,"Twelfth grade"],
+  [FirstGrade,"First grade"],
+  [SecondGrade,"Second grade"],
+  [ThirdGrade,"Third grade"],
+  [FourthGrade,"Fourth grade"],
+  [FifthGrade,"Fifth grade"],
+  [SixthGrade,"Sixth grade"],
+  [SeventhGrade,"Seventh grade"],
+  [EighthGrade,"Eighth grade"],
+  [NinthGrade,"Ninth grade"],
+  [TenthGrade,"Tenth grade"],
+  [EleventhGrade,"Eleventh grade"],
+  [Twelfthgrade,"Twelfth grade"],
   [Ungraded,"Ungraded"]
 ] -%}
 
 {%- set actual_grades = [] -%}
 {%- for grade in possible_grades -%}
   {%- if grade[0] in ["Y","y"] -%}
-    {%- set _ = actual_grades.append(score) -%}
+    {%- set _ = actual_grades.append(grade) -%}
   {%- endif -%}
 {%- endfor -%}
 
-
-
-
 {
-    "CodeValue": "{{Code}}",
-    "shortDescription": "{{shortDescription}}",
-	"NameSpace": "uri://ed-fi.org/AbsenceEventCategoryDescriptor"
-}
-
-{
-  "calendarCode": "{{Calendar Code}}",
+  "calendarCode": "{{CalendarCode}}",
   "schoolReference": {
-    "schoolId": 0,
-    "link": {
-      "rel": "string",
-      "href": "string"
-    }
+    "schoolId": {{SchoolID}},
   },
   "schoolYearTypeReference": {
-    "schoolYear": {{School ID}},
+    "schoolYear": {{SchoolYear}},
   },
-  "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor{{Calendar Type}}",
+  "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor#{{CalendarType}}",
   
-  
-  "gradeLevels": [
-    {
-      "gradeLevelDescriptor": "string"
-    }
+  {%- if actual_grades -%}
+  , "gradeLevels": [
+    {% for grade2 in actual_grades %}
+      {
+        "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#{{grade2[1]}}"
+      } {% if not loop.last %},{% endif %}
+    {% endfor %}
   ]
+  {%- endif -%}
+  
 }
-Parameter content type
-
-
-
- Preschool,Infant/Toddler,Preschool,Kindergarten,First grade,Second grade,Third grade,Fourth grade,Fifth grade,Sixth grade,Seventh grade,Eighth grade,Ninth grade,Tenth grade,Eleventh grade,Twelfth grade,Ungraded

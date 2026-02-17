@@ -4,15 +4,15 @@ config:
   output_dir: ./output/
 
 sources:
-  csv_source:
-    file: ./in/descriptor.csv
+  calendar:
+    file: ./samples/CalendarTypeGradeLevels.csv
     header_rows: 1
 
 
 destinations:
-  mydata:
-    source: $sources.csv_source
-    template: ./templates/mydata.jsont
+  calendar:
+    source: $sources.calendar
+    template: ./templates/calendar.jsont
     extension: jsonl
     linearize: True
     

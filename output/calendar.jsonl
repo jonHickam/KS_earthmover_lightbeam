@@ -1,0 +1,4 @@
+{ "calendarCode": "TestCalendar", "schoolReference": { "schoolId": 310019984, }, "schoolYearTypeReference": { "schoolYear": 2026, }, "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor#Grade Level",, "gradeLevels": [  { "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Kindergarten" }   ]} 
+{ "calendarCode": "IEPCalendar", "schoolReference": { "schoolId": 310019984, }, "schoolYearTypeReference": { "schoolYear": 2026, }, "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor#IEP",} 
+{ "calendarCode": "SchoolCalendar", "schoolReference": { "schoolId": 310019984, }, "schoolYearTypeReference": { "schoolYear": 2026, }, "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor#School",} 
+{ "calendarCode": "StaffCalendar", "schoolReference": { "schoolId": 310019984, }, "schoolYearTypeReference": { "schoolYear": 2026, }, "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor#Staff",} 
