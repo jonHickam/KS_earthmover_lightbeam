@@ -1,0 +1,2 @@
+{"calendarCode": "TestCalendar", "schoolReference": { "schoolId": 255901107 }, "schoolYearTypeReference": { "schoolYear": 2026 }, "calendarTypeDescriptor": "uri://ksde.org/CalendarTypeDescriptor#Grade Level", "gradeLevels": [  { "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Kindergarten" }   ]} 
+{"calendarCode": "SchoolCalendar", "schoolReference": { "schoolId": 255901107 }, "schoolYearTypeReference": { "schoolYear": 2026 }, "calendarTypeDescriptor": "uri://ksde.org/CalendarTypeDescriptor#School"} 

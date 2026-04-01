@@ -15,22 +15,30 @@ sources:
   courseOffering:
     file: ./samples/CourseOfferings.csv
     header_rows: 1
+  
 
 destinations:
   calendar:
     source: $sources.calendar
-    template: ./templates/calendar.jsont
+    template: ./templates/calendars.jsont
     extension: jsonl
     linearize: True
  
   calendarDate:
     source: $sources.calendarDate
-    template: ./templates/calendarDate.jsont
+    template: ./templates/calendarDates.jsont
     extension: jsonl
     linearize: True
 
   courseOffering:
     source: $sources.courseOffering
-    template: ./templates/CourseOffering.jsont
+    template: ./templates/courseOfferings.jsont
+    extension: jsonls
+    linearize: True
+
+  section:
+    source: $sources.courseOffering
+    template: ./templates/sections.jsont
     extension: jsonl
     linearize: True
+  

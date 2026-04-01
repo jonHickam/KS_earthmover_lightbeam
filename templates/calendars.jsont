@@ -28,12 +28,12 @@
 {
   "calendarCode": "{{CalendarCode}}",
   "schoolReference": {
-    "schoolId": {{SchoolID}},
+    "schoolId": {{SchoolID}}
   },
   "schoolYearTypeReference": {
-    "schoolYear": {{SchoolYear}},
+    "schoolYear": {{SchoolYear}}
   },
-  "calendarTypeDescriptor": "uri://ed-fi.org/CalendarTypeDescriptor#{{CalendarType}}",
+  "calendarTypeDescriptor": "uri://ksde.org/CalendarTypeDescriptor#{{CalendarType}}"
   
   {%- if actual_grades -%}
   , "gradeLevels": [

@@ -1,25 +1,27 @@
-state_dir: ./lightbeam/
-data_dir: ./output/
+data_dir: .\output
 namespace: ed-fi
+namespace_overrides:
+  tpdm:
+    - candidates
 edfi_api:
-  base_url: https://localhost/binaries/WebApi
-  oauth_url: https://localhost/binaries/WebApi/oauth/token 
-  dependencies_url: https://localhost/binaries/WebApi/metadata/data/v3/dependencies
-  open_api_metadata_url: https://localhost/binaries/WebApi/metadata/
-  descriptors_swagger_url: https://localhost/binaries/WebApi/metadata/data/v3/descriptors/swagger.json
-  resources_swagger_url: https://localhost/binaries/WebApi/metadata/data/v3/resources/swagger.json
+  base_url: http://localhost:54746
+  #oauth_url: http://localhost:54746/oauth/token
+  #dependencies_url: http://localhost:54746/metadata/data/v3/dependencies
+  # open_api_metadata_url: http://localhost:54746/metadata/xsd
+  descriptors_swagger_url: http://localhost:54746/metadata/data/v3/descriptors/swagger.json
+  resources_swagger_url: http://localhost:54746/metadata/data/v3/resources/swagger.json
   version: 3
   mode: sandbox
-  year: 2021
-  client_id: d8y24vwqozlrf9gtBOiMA
-  client_secret: V1m35M4O8SItkDU7QBihc
+ # year: 2021
+  client_id: 7AnDGLk3TCajcrweRFoJ4
+  client_secret: ONtI8xn51ZPoG7Du9MkKL
 connection:
   pool_size: 8
   timeout: 60
   num_retries: 10
   backoff_factor: 1.5
   retry_statuses: [429, 500, 502, 503, 504]
-  verify_ssl: False
+  verify_ssl: True
 count:
   separator: ","
 fetch:
@@ -38,5 +40,5 @@ validate:
     behavior: exclude # or `include`
     remote: False # default=True
 force_delete: True
-log_level: INFO
+log_level: DEBUG
 show_stacktrace: True
